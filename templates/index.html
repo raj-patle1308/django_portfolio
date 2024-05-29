@@ -1,0 +1,629 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>RAJ PATLE</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/1.ico' %}">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container-fluid px-0">
+
+      <div class="header">
+        
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow bg-dark text-white">
+  <div class="container-fluid">
+
+    <a class="col-md-3 d-flex align-items-center mb-2 mb-md-0 h4 text-decoration-none text-uppercase fw-bolder text-white" href="/">
+      <span class="material-icons-outlined ms-2 me-3">RAJ PATLE</span>Developer
+    </a>
+
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="material-icons-outlined">menu</span>
+    </button>
+
+    <div class="container px-3">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link me-lg-3 text-uppercase text-white" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-lg-3 text-uppercase text-white" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-lg-3 text-uppercase text-white" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-lg-3 text-uppercase text-white" href="#Info">Contact Detail</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-lg-3 text-uppercase text-white" href="#contactUS">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+
+        
+<!-- Hero -->
+<header class="py-5 bg-dark">
+  <div class="container px-5">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-8 col-xl-7 col-xxl-6 text-center text-lg-start">
+        {% if hero_data %}
+          {% for hero in hero_data %}
+            <div class="my-5">
+              <h1 class="display-3 fw-bold mb-4">{{ hero.title }}</h1>
+              <h2 class="h4 fw-bold mb-4">{{ hero.subtitle }}</h2>
+              <p class="lead text-white mb-4">{{ hero.description }}</p>
+            </div>
+
+      </div>
+      <div class="col-xl-5 col-xxl-6 text-center">
+        <div class="rounded-circle overflow-hidden mx-auto" style="width: 200px; height: 200px;">
+          {% if hero.image.url %}
+            <!-- Set width and height for the image -->
+            <img class="w-100 h-100 object-cover" src="{{ hero.image.url }}" alt="Hero Image">
+          {% else %}
+            <img class="w-auto h-auto" src="{% static 'images/no_image.png' %}" alt="Image Not Available">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+        {% else %}
+          <h5 class="text-white">No Data</h5>
+        {% endif %}
+  </div>
+   <div class="section">
+  <div class="container text-center">
+    <div class="button-container">
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://www.instagram.com/raj_patle_1_3_0_8_/" rel="tooltip" title="Follow me on Instagram">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://www.linkedin.com/in/raj-patle-4b6520272/" rel="tooltip" title="Connect with me on LinkedIn">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://github.com/raj-patle1308" rel="tooltip" title="Send Friend Request me on GitHub">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Add Bootstrap CSS and FontAwesome CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</header>
+<!-- End Hero -->
+
+
+
+
+        
+<!-- Waves Container -->
+<div class="bg-dark">
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+      <!-- Light black wave -->
+      <path id="light-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+      <!-- Light black wave -->
+      <use xlink:href="#light-wave" x="48" y="7" fill="rgba(0,0,0,0.1)" />
+    </g>
+  </svg>
+</div>
+<!-- End Waves Container -->
+
+
+
+      
+      </div>
+      
+      <main>
+        
+        <!-- About -->
+        <section id="about" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">About</h2>
+              <p class=" text-white">
+                Hello! I am Raj. Coder,Speaker,Python,Machine Learning,Artificial intelligence,Web Developer.
+
+                My Life is Constantly Under Construction.
+              </p>
+            </div>
+
+          </div>
+
+                <div class="section" id="skill">
+        <div class="container">
+          <div class="h4 text-center mb-4 title">Professional Skills</div>
+          <div class="card bg-dark text-white" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="progress-container progress-primary"><span class="progress-badge">ML</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 85%;"></div><span class="progress-value">85%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="progress-container progress-primary"><span class="progress-badge">HTML,CSS,JS</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="progress-container progress-primary"><span class="progress-badge">C,C++</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="progress-container progress-primary"><span class="progress-badge">Bootstrap</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 85%;"></div><span class="progress-value">85%</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="progress-container progress-primary"><span class="progress-badge">D-Jango,Flask</span>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
+                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100" style="width: 90%;"></div><span class="progress-value">90%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <hr><hr><hr>
+          <!-- References Section -->
+<div class="section" id="reference">
+  <div class="container cc-reference">
+    <div class="h4 mb-4 text-center title">References</div>
+    <div class="card bg-dark text-white" data-aos="zoom-in">
+      <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
+          <li data-target="#cc-Indicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header">
+                <img src="/static/images/reference-image-1.jpg" alt="Image" />
+                <div class="h5 pt-2">Dr. Arshad Shareef</div>
+                <p class="category">CEO Of Brillect Tech Solution Pvt.</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p class="small-text">Dr. Arshad Shareef is CEO of the Brillect Tech Solution Pvt. He is an employment specialist, speaker, and expert in Machine Learning, Data Science, and Cyber Security.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-2 col-md-3 cc-reference-header">
+                <img src="/static/images/reference-image-2.jpg" alt="Image" />
+                <div class="h5 pt-2">Rimanshu Kumbhare</div>
+                <p class="category">Software Developer at Brillect Tech Solution Pvt.</p>
+              </div>
+              <div class="col-lg-10 col-md-9">
+                <p class="small-text">Rimanshu Kumbhare is Software Developer at Brillect Tech Solution Pvt. He is an employment specialist, speaker, and expert in Java, Python, and Software Testing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Left and Right Controls -->
+        <a class="carousel-control-prev" href="#cc-Indicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#cc-Indicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom CSS for Smaller Text -->
+
+          <div class="container">
+            {% if about_data %}
+              <div class="row bg-dark text-white">
+                
+                {% for about in about_data %}
+                  <div class="col-lg-4 mx-auto mb-5">
+                    <div class="d-flex mb-5 justify-content-center">
+                      <div class="about-icon d-inline-flex align-items-center justify-content-center bg-primary text-white fs-4 rounded-2">
+                        <span class="about material-icons-outlined text-white">{{ about.icon }}</span>
+                      </div>
+                    </div>
+                    <h5>{{ about.title }}</h5>
+                    <p class="text-muted mb-0">
+                      {{ about.description }}
+                    </p>
+                  </div>
+                {% endfor %}
+                <div class="col-lg-6 col-md-12">
+                <div class="card-body">
+                  <div class="h4 mt-0 title">Basic Information</div>
+                  <div class="row">
+                    <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
+                    <div class="col-sm-8">18</div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
+                    <div class="col-sm-8">patlerajpro1308@gmail.com</div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
+                    <div class="col-sm-8">+91-7028148747</div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                    <div class="col-sm-8"> City Center, Nagpur, Maharashtra, India</div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
+                    <div class="col-sm-8">English, Hindi</div>
+                  </div>
+                </div>
+
+              </div>
+            {% else %}
+              <h5 class="text-primary text-center"></h5>
+            {% endif %}
+          </div>
+        </section>
+        <!-- End About -->
+        
+
+  
+        <!-- Projects -->
+        <section id="projects" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Projects</h2>
+              <p class="lead text-muted mb-5">
+                View some of my latest projects
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            {% if project_data %}
+              <div class="row">
+                
+                {% for project in project_data %}
+                  <div class="col-lg-4 mx-auto mb-5">
+                    <div class="card h-100 shadow-lg border-0 bg-light">
+
+                      {% if project.image.url %}
+                        <img class="card-img-top" src="{{ project.image.url }}" alt="Project">
+                      {% else %}
+                        <img class="card-img-top project-not-found" src="{% static 'images/no_image.png' %}" alt="Image Not Available">
+                      {% endif %}
+
+                      <div class="card-body p-4">
+                        <h5 class="card-title mb-3">{{ project.name }}</h5>
+                        <div class="mb-2">
+                          {% for tag in project.tags.all %}
+                            <div class="badge bg-primary rounded-pill">{{ tag.name }}</div>
+                          {% endfor %}
+                        </div>
+                        <p class="card-text">
+                          {{ project.description }}
+                        </p>
+                      </div>
+                      <div class="card-footer bg-transparent mb-3">
+                        <a class="btn btn-outline-primary btn-sm text-uppercase" href="{{ project.link }}" target="_blank">
+                          <span class="material-icons-outlined me-1">code</span>
+                          Source Code
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+
+              </div>
+            {% else %}
+              <h5 class="text-primary text-center">No Data</h5>
+            {% endif %}
+          </div>
+        </section>
+        <!-- End Projects -->
+
+        <!-- Contact -->
+<section id="Info" class="bg-dark text-white p-5 mt-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <h2 class="fw-bold text-center">Basics Info.</h2>
+    </div>
+  </div>
+  <div class="container">
+    {% if contact_data %}
+      <ul class="list-unstyled text-center my-3">
+        {% for contact in contact_data %}
+          <li class="mb-3">
+            <span class="contact-icon me-2">Age: </span>
+            <span class="fs-5">18</span>
+          </li>
+          <li class="mb-3">
+            <span class="contact-icon me-2">Location: </span>
+            <span class="fs-5">{{ contact.address }}</span>
+          </li>
+          <li class="mb-3">
+            <span class="contact-icon me-2">Email Id: </span>
+            <span class="fs-5">{{ contact.email }}</span>
+          </li>
+          <li class="mb-3">
+            <span class="contact-icon me-2">Phone No: </span>
+            <span class="fs-5">{{ contact.phone }}</span>
+          </li>
+          <li class="mb-3">
+            <span class="contact-icon me-2">Language: </span>
+            <span class="fs-5">English, Hindi</span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <h5 class="bg-primary text-white text-center">No Data</h5>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Add Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  
+      </main>
+
+    </div>
+
+          <div class="section" id="contactUS">
+  <div class="cc-contact-information" style="background-image: url('/static/images/staticmap.png'); background-size: cover; background-position: center;">
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row justify-content-center">
+          <div class="col-md-9">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">Contact Me</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <form action="https://formspree.io/f/mzbldykz" method="POST">
+                      <div class="p pb-3"><strong>Feel free to contact me </strong></div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                            </div>
+                            <input class="form-control" type="text" name="name" placeholder="Name" required="required" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-file-text"></i></span>
+                            </div>
+                            <input class="form-control" type="text" name="Subject" placeholder="Subject" required="required" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                            </div>
+                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col text-center">
+                          <button class="btn btn-primary" type="submit">Send</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <p class="mb-0"><strong>Address </strong></p>
+                    <p class="pb-2">City Center, Nagpur, Maharashtra, India</p>
+                    <p class="mb-0"><strong>Phone</strong></p>
+                    <p class="pb-2">+91-7028148747</p>
+                    <p class="mb-0"><strong>Email</strong></p>
+                    <p>rajpatlepro1308@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Bootstrap CSS and JS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <!-- Footer -->
+    <footer class="text-center py-4">
+          <div class="section">
+  <div class="container text-center">
+    <div class="button-container">
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://www.instagram.com/raj_patle_1_3_0_8_/" rel="tooltip" title="Follow me on Instagram">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://www.linkedin.com/in/raj-patle-4b6520272/" rel="tooltip" title="Connect with me on LinkedIn">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn-default btn-round btn-lg btn-icon social-icon" href="https://github.com/raj-patle1308" rel="tooltip" title="Send Friend Request me on GitHub">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Add Bootstrap CSS and FontAwesome CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="h4 title text-center">Raj Patle</div>
+      {% if footer_data %}
+        <div class="container px-5 mb-2">
+          {% for footer in footer_data %}
+            Copyright &copy; <script>document.write(new Date().getFullYear())</script> {{ footer.copyright }}.
+          {% endfor %}
+        </div>
+      {% else %}
+        <h5 class="text-primary text-center">No Data</h5>
+      {% endif %}
+    </footer>
+    <!-- End Footer -->
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
+
+
+<style>
+  .cc-contact-information {
+    background-size: cover;
+    background-position: center;
+  }
+  .cc-contact .card {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+  .cc-contact .input-group-text, .cc-contact .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  .cc-contact .input-group-prepend .input-group-text {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+  .cc-contact .input-group .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .cc-contact .card-body form {
+    max-width: 100%;
+  }
+
+
+  .contact-icon {
+    font-size: 1.25rem; /* Adjust the icon size */
+    font-weight: bold;
+  }
+
+  .fs-5 {
+    font-size: 1.125rem; /* Adjust the text size */
+  }
+
+  .list-unstyled li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-unstyled li span:nth-child(2) {
+    margin-left: 0.5rem;
+  }
+
+
+  .small-text {
+    font-size: 0.875rem; /* Adjust the font size as needed */
+
+  }
+    .social-icon i {
+    color: white;
+  }
+
+  .btn.btn-default {
+    background-color: transparent;
+    border: 2px solid white;
+  }
+
+  .btn.btn-default:hover {
+    background-color: white;
+    color: black;
+  }
+</style>
